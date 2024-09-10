@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace CarBook.Domain.Entities
 {
-    public class Brand
+    public class Testimonial
     {
-        public int BrandId { get; set; }
+        public int TestimonialId { get; set; }
         public string Name { get; set; }
-        public List<Car> Cars { get; set; }
+        public string Title { get; set; }
+        public string Comment { get; set; }
+        public string ImageUrl { get; set; }
     }
 }
