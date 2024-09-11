@@ -24,7 +24,7 @@ namespace CarBook.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<T>> GetAllAsync(int id)
+        public async Task<List<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
         }
