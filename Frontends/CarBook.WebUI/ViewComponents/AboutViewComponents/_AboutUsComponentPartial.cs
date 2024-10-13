@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CarBook.WebUI.ViewComponents.AboutViewComponent
+namespace CarBook.WebUI.ViewComponents.AboutViewComponents
 {
     public class _AboutUsComponentPartial : ViewComponent
     {
