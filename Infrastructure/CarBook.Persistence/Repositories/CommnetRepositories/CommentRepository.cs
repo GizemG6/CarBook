@@ -26,7 +26,14 @@ namespace CarBook.Persistence.Repositories.CommnetRepositories
 
         public List<Comment> GetAll()
         {
-            return _context.Comments.ToList();
+            return _context.Comments.Select(x => new Comment
+            {
+                CommentId = x.CommentId,
+                BlogId = x.BlogId,
+                CreatedDate = x.CreatedDate,
+                Description = x.Description,
+                Name = x.Name
+            }).ToList();
         }
 
         public Comment GetById(int id)
