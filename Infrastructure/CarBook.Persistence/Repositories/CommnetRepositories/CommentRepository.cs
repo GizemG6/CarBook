@@ -36,7 +36,8 @@ namespace CarBook.Persistence.Repositories.CommnetRepositories
 
         public void Remove(Comment entity)
         {
-            _context.Comments.Remove(entity);
+            var value = _context.Comments.Find(entity.CommentId);
+            _context.Comments.Remove(value);
             _context.SaveChanges();
         }
 
