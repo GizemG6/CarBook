@@ -16,13 +16,19 @@ namespace CarBook.WebUI.Controllers
         public async Task<IActionResult> IndexAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7194/api/Cars/GetLast5CarsWithBrand");
+            var responseMessage = await client.GetAsync("https://localhost:7194/api/Cars/GetCarWithBrand");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultCarWithBrandDto>>(jsonData);
                 return View(values);
             }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult CreateCar()
+        {
             return View();
         }
     }
