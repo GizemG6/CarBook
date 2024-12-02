@@ -53,7 +53,7 @@ namespace CarBook.WebUI.Controllers
         public async Task<IActionResult> RemoveBrand(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync("https://localhost:7194/api/Brands?id=" + id);
+            var responseMessage = await client.DeleteAsync($"https://localhost:7194/api/Brands/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
