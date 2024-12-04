@@ -1,4 +1,4 @@
-﻿@model CarBook.Dto.BannerDtos.CreateBannerDto
+﻿@model CreateBannerDto
 
 @{
     ViewData["Title"] = "CreateBanner";
@@ -16,19 +16,19 @@
                         <form method="post" asp-area="Admin" asp-controller="AdminBanner" asp-action="CreateBanner">
                             <div class="form-group">
                                 <label for="Title">Başlık</label>
-                                <input type="text" class="form-control" id="Title" asp-for="Title" placeholder="Başlığı Giriniz">
+                                <input type="text" class="form-control" id="iTitle" asp-for="Title" placeholder="Başlığı Giriniz">
                             </div>
                             <div class="form-group">
                                 <label for="Description">Açıklama</label>
-                                <input type="text" class="form-control" id="Description" asp-for="Description" placeholder="Açıklamayı Giriniz">
+                                <input type="text" class="form-control" id="iDescription" asp-for="Description" placeholder="Açıklamayı Giriniz">
                             </div>
                             <div class="form-group">
                                 <label for="VideoDescription">Video Açıklama</label>
-                                <input type="text" class="form-control" id="VideoDescription" asp-for="VideoDescription" placeholder="Video Açıklamasını Giriniz">
+                                <input type="text" class="form-control" id="iVideoDescription" asp-for="VideoDescription" placeholder="Video Açıklamasını Giriniz">
                             </div>
                             <div class="form-group">
                                 <label for="VideoUrl">Video Url</label>
-                                <input type="text" class="form-control" id="VideoUrl" asp-for="VideoUrl" placeholder="Video'nun Youtube Embed Linkini Giriniz">
+                                <input type="text" class="form-control" id="iVideoUrl" asp-for="VideoUrl" placeholder="Video'nun Youtube Embed Linkini Giriniz">
                             </div>
                             <button type="submit" class="btn btn-primary waves-effect waves-light">Kaydet</button>
                         </form>
