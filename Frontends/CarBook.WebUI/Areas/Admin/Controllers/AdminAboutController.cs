@@ -57,7 +57,7 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> RemoveAbout(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7194/api/Banners?id={id}");
+            var responseMessage = await client.DeleteAsync($"https://localhost:7194/api/Abouts?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "AdminAbout", new { area = "Admin" });
