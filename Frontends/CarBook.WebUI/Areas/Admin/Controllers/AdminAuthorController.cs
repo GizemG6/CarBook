@@ -2,6 +2,7 @@
 using CarBook.Dto.AuthorDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CarBook.WebUI.Areas.Admin.Controllers
 {
@@ -26,6 +27,28 @@ namespace CarBook.WebUI.Areas.Admin.Controllers
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultAuthorDto>>(jsonData);
                 return View(values);
+            }
+            return View();
+        }
+
+        [HttpGet]
+        [Route("CreateAuthor")]
+        public IActionResult CreateAuthor()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("CreateAuthor")]
+        public async Task<IActionResult> CreateAuthor(CreateAuthorDto createAuthorDto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createAuthorDto);
+            StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("https://localhost:7194/api/Authors", content);
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index", "AdminAuthor", new { area = "Admin" });
             }
             return View();
         }
