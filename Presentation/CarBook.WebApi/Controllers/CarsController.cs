@@ -2,6 +2,9 @@
 using CarBook.Application.Features.CQRS.Handlers.CarHandlers;
 using CarBook.Application.Features.CQRS.Queries.AboutQueries;
 using CarBook.Application.Features.CQRS.Queries.CarQueries;
+using CarBook.Application.Features.Mediator.Handlers.StatisticsHandlers;
+using CarBook.Application.Features.Mediator.Queries.StatisticsQueries;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -77,5 +80,6 @@ namespace CarBook.WebApi.Controllers
             var values = _getLast5CarsWithBrandQueryHandler.Handle();
             return Ok(values);
         }
+
     }
 }
