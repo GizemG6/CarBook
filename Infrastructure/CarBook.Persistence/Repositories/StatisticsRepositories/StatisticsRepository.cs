@@ -86,7 +86,7 @@ namespace CarBook.Persistence.Repositories.StatisticsRepositories
             int pricingId = _context.Pricings.Where(x => x.Name == "Günlük").Select(x => x.PricingId).FirstOrDefault();
             decimal maxAmount = _context.CarPricings.Where(x => x.PricingId == pricingId).Max(x => x.Amount);
             int carId = _context.CarPricings.Where(x => x.Amount == maxAmount).Select(x => x.CarId).FirstOrDefault();
-            string brandModel = _context.Cars.Where(x => x.CarId == carId).Include(x => x.BrandId).Select(x => x.Brand.Name + " " + x.Model).FirstOrDefault();
+            string brandModel = _context.Cars.Where(x => x.CarId == carId).Include(x => x.Brand).Select(x => x.Brand.Name + " " + x.Model).FirstOrDefault();
             return brandModel;
         }
 
