@@ -18,7 +18,7 @@ using CarBook.Persistence.Repositories;
 using CarBook.Persistence.Repositories.BlogRepositories;
 using CarBook.Persistence.Repositories.CarPricingRepositories;
 using CarBook.Persistence.Repositories.CarRepositories;
-using CarBook.Persistence.Repositories.CommnetRepositories;
+using CarBook.Persistence.Repositories.CommentRepositories;
 using CarBook.Persistence.Repositories.RentACarRepositories;
 using CarBook.Persistence.Repositories.StatisticsRepositories;
 using CarBook.Persistence.Repositories.TagCloudRepositories;

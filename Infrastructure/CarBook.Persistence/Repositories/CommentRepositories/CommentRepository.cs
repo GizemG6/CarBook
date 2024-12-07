@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Persistence.Repositories.CommnetRepositories
+namespace CarBook.Persistence.Repositories.CommentRepositories
 {
     public class CommentRepository<T> : IGenericRepository<Comment>
     {
@@ -57,6 +57,11 @@ namespace CarBook.Persistence.Repositories.CommnetRepositories
         {
             _context.Comments.Update(entity);
             _context.SaveChanges();
+        }
+
+        public int GetCountCommentByBlog(int id)
+        {
+            return _context.Comments.Where(x => x.BlogId == id).Count();
         }
     }
 }
