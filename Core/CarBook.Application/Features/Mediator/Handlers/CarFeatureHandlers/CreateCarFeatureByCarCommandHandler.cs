@@ -24,8 +24,8 @@ namespace CarBook.Application.Features.Mediator.Handlers.CarFeatureHandlers
             _repository.CreateCarFeatureByCar(new CarFeature
             {
                 Available = false,
-                CarID = request.CarID,
-                FeatureID = request.FeatureID
+                CarId = request.CarID,
+                FeatureId = request.FeatureID
             });
         }
     }
