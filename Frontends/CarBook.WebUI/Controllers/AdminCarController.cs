@@ -16,8 +16,9 @@ namespace CarBook.WebUI.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public async Task<IActionResult> Index(int carId)
         {
+            ViewBag.CarId = carId;
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("https://localhost:7194/api/Cars/GetCarWithBrand");
             if (responseMessage.IsSuccessStatusCode)

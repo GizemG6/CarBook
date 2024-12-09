@@ -8,6 +8,7 @@ namespace CarBook.Dto.CarFeatureDtos
 {
     public class ResultCarFeatureByCarIdDto
     {
+        public int CarId { get; set; }  
         public int CarFeatureId { get; set; }
         public int FeatureId { get; set; }
         public string FeatureName { get; set; }
