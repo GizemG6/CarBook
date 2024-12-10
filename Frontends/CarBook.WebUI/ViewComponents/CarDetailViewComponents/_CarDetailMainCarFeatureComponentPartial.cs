@@ -15,7 +15,7 @@ namespace CarBook.WebUI.ViewComponents.CarDetailViewComponents
 		{
 			ViewBag.carid = id;
 			var client = _httpClientFactory.CreateClient();
-			var resposenMessage = await client.GetAsync($"https://localhost:7060/api/Cars/{id}");
+			var resposenMessage = await client.GetAsync($"https://localhost:7194/api/Cars/{id}");
 			if (resposenMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await resposenMessage.Content.ReadAsStringAsync();
