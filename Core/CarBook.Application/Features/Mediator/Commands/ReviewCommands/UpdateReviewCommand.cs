@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Domain.Entities
+namespace CarBook.Application.Features.Mediator.Commands.ReviewCommands
 {
-    public class Review
+    public class UpdateReviewCommand : IRequest
     {
         public int ReviewId { get; set; }
         public string CustomerName { get; set; }
@@ -14,7 +15,6 @@ namespace CarBook.Domain.Entities
         public string Comment { get; set; }
         public int RaytingValue { get; set; }
         public DateTime ReviewDate { get; set; }
-        public Car Car { get; set; }
         public int CarId { get; set; }
     }
 }
