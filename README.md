@@ -201,4 +201,7 @@ Admin/AdminBlog/Index
 
 ![Ekran görüntüsü 2024-12-12 234045](https://github.com/user-attachments/assets/d1c81fe3-557a-4f92-b6fb-6677a2219fcf)
 
+DB-Diagram
+
+![Ekran görüntüsü 2024-12-13 001022](https://github.com/user-attachments/assets/5e65e3ef-f508-46b5-84cb-5a9ecf7a364d)
 
