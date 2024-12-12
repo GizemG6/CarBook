@@ -2,6 +2,8 @@ CarBook Project
 -------------------
 Course Link: https://www.udemy.com/course/aspnet-core-api-8-onion-architecture-ile-bookcar-projesi/
 
+I would like to express my gratitude to Murat Yücedağ for their support and guidance.
+
 About the Project
 -------------------
 CarBook is a car rental platform developed using ASP.NET Core API and .NET 8. The project adopts modern software development approaches and utilizes the following technologies and methodologies:
@@ -121,3 +123,5 @@ dotnet run
 
 •Use Postman or Swagger to test the endpoints.
 
+Below are a few screenshots from the project
+---------------------------------------------
